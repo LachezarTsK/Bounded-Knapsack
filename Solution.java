@@ -69,8 +69,6 @@ public class Solution {
   /**
    * Through the application of the Knapsack Algorithm, the method finds the products, which total
    * sum of calories is as close as possible to target calories.
-   *
-   * <p>The total sum of caories could not exceed the target calories.
    */
   private static HashSet<Product> findProductsForTargetCalories() {
     /** 
