@@ -73,13 +73,20 @@ public class Solution {
    * <p>The total sum of caories could not exceed the target calories.
    */
   private static HashSet<Product> findProductsForTargetCalories() {
-    /** The Array stores the selected products. After processing all the data, the selected 
+    /** 
+    * The Array stores the selected products. 
+    * After processing all the data, the selected 
     * products are contained in pr[targetCalories].
     */
     @SuppressWarnings("unchecked")
     HashSet<Product>[] pr = new HashSet[targetCalories + 1];
     Arrays.fill(pr, new HashSet<Product>());
-    /** Knapsack table for finding the calories closest to the target. */
+    
+    /** 
+    * Knapsack table for finding the calories closest to the target.
+    * After processing all the data, the sum closest to the target
+    * is contained in maxCalories[targetCalories].
+    */
     int[] maxCalories = new int[targetCalories + 1];
 
     for (int i = 0; i < products.size(); i++) {
