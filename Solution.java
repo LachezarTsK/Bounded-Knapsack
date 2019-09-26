@@ -73,11 +73,11 @@ public class Solution {
   private static HashSet<Product> findProductsForTargetCalories() {
     /** 
     * The Array stores the selected products. After processing all the data, 
-    * the selected products are contained in pr[targetCalories].
+    * the selected products are contained in selectedProducts[targetCalories].
     */
     @SuppressWarnings("unchecked")
-    HashSet<Product>[] pr = new HashSet[targetCalories + 1];
-    Arrays.fill(pr, new HashSet<Product>());
+    HashSet<Product>[] selectedProducts = new HashSet[targetCalories + 1];
+    Arrays.fill(selectedProducts, new HashSet<Product>());
     
     /** 
     * Knapsack table for finding the calories closest to the target.
@@ -91,13 +91,13 @@ public class Solution {
 
         if (maxCalories[j] < products.get(i).price + maxCalories[j - products.get(i).calories]) {
           maxCalories[j] = products.get(i).price + maxCalories[j - products.get(i).calories];
-          pr[j] = new HashSet<Product>();
-          pr[j].add(products.get(i));
-          pr[j].addAll(pr[j - products.get(i).calories]);
+          selectedProducts[j] = new HashSet<Product>();
+          selectedProducts[j].add(products.get(i));
+          selectedProducts[j].addAll(selectedProducts[j - products.get(i).calories]);
         }
       }
     }
-    return pr[targetCalories];
+    return selectedProducts[targetCalories];
   }
 
   private static void printResults(HashSet<Product> results) {
