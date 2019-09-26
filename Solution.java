@@ -37,7 +37,6 @@ public class Solution {
     targetCalories = scanner.nextInt();
 
     while (true) {
-
       System.out.println("Enter product name:");
       String name = scanner.next();
 
