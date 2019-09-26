@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Application that selects products from a list, so that the total calories of 
  * the selected products is as close as possible to the entered target calories.
  *
- * The resulting total sum of calories could be lower than or equal to the target
+ * The resulting total sum of calories could be lower than, or equal to, the target
  * calories but can not exceed it.
  *
  * The products comprising the results are displayed by their name, price and calories.
