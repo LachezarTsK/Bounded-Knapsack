@@ -14,11 +14,11 @@ import java.util.Scanner;
  * The products comprising the results are displayed by their name, price and calories.
  *
  * The application demonstrates the implementation of the Knapsack Algorithm and 
- * a way to store the invidual components that compose tha resulting maximum sum.
+ * a way to store the invidual components that compose tha resulting sum.
  */
 public class Solution {
   /**
-  * The list comprises all the prodcuts from which the selection is made.
+  * The List comprises all the prodcuts from which the selection is made.
   */
   private static List<Product> products;
   private static int targetCalories;
@@ -72,9 +72,8 @@ public class Solution {
    */
   private static HashSet<Product> findProductsForTargetCalories() {
     /** 
-    * The Array stores the selected products. 
-    * After processing all the data, the selected 
-    * products are contained in pr[targetCalories].
+    * The Array stores the selected products. After processing all the data, 
+    * the selected products are contained in pr[targetCalories].
     */
     @SuppressWarnings("unchecked")
     HashSet<Product>[] pr = new HashSet[targetCalories + 1];
