@@ -1,24 +1,25 @@
-package boundedKnapsack.maxCalories;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
-// import java.util.Set;
+
 /**
  * Application that selects products from a list, the total calories of which is as close as
  * possible to the entered target calories.
  *
- * <p>The total sum of calories of the selected products could be lower than, or equal to the target
+ * The resulting total sum of calories could be lower than, or equal to the target
  * calories but can not exceed it.
  *
- * <p>The products comprising the results are displayed by their name, price and calories.
+ * The products comprising the results are displayed by their name, price and calories.
  *
- * <p>The application demonstrates the implementation of the Knapsack Algorithm and a way to store
- * the invidual components that compose tha resulting maximum sum.
+ * The application demonstrates the implementation of the Knapsack Algorithm and 
+ * a way to store the invidual components that compose tha resulting maximum sum.
  */
 public class Solution {
+  /**
+  * The list comprises all the prodcuts from which the selection is made.
+  */
   private static List<Product> products;
   private static int targetCalories;
 
@@ -72,7 +73,9 @@ public class Solution {
    * <p>The total sum of caories could not exceed the target calories.
    */
   private static HashSet<Product> findProductsForTargetCalories() {
-    /** Storing the selected products. */
+    /** The Array stores the selected products. After processing all the data, the selected 
+    * products are contained in pr[targetCalories].
+    */
     @SuppressWarnings("unchecked")
     HashSet<Product>[] pr = new HashSet[targetCalories + 1];
     Arrays.fill(pr, new HashSet<Product>());
