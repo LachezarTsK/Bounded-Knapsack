@@ -5,10 +5,10 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 /**
- * Application that selects products from a list, the total calories of which is as close as
- * possible to the entered target calories.
+ * Application that selects products from a list, so that the total calories of 
+ * the selected products is as close as possible to the entered target calories.
  *
- * The resulting total sum of calories could be lower than, or equal to the target
+ * The resulting total sum of calories could be lower than or equal to the target
  * calories but can not exceed it.
  *
  * The products comprising the results are displayed by their name, price and calories.
@@ -55,6 +55,7 @@ public class Solution {
         Product pr = new Product(name, price, calories);
         products.add(pr);
       }
+      
       System.out.println("Press 'c' calculate list of products.");
       System.out.println("Press any other character to add another product.");
       String calculate = scanner.next();
@@ -67,8 +68,7 @@ public class Solution {
   }
 
   /**
-   * Through the application of the Knapsack Algorithm, the method finds the products, which total
-   * sum of calories is as close as possible to target calories.
+   * Implementation of the Knapsack Algorithm for finding the products for the target calories.
    */
   private static HashSet<Product> findProductsForTargetCalories() {
     /** 
@@ -115,7 +115,6 @@ public class Solution {
   }
 
   public static class Product {
-
     String name;
     int price;
     int calories;
